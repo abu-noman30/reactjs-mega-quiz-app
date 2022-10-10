@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,34 +28,43 @@ const Navbar = () => {
 						</a>
 						<ul className='items-center hidden space-x-8 lg:flex'>
 							<li>
-								<a
-									href='/home'
+								<NavLink
+									to='/home'
 									aria-label='Our product'
 									title='Our product'
 									className='font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400'
+									style={({ isActive }) => ({
+										textDecoration: isActive ? 'underline' : ''
+									})}
 								>
 									Home
-								</a>
+								</NavLink>
 							</li>
 							<li>
-								<a
-									href='/'
+								<NavLink
+									to='/statistics'
 									aria-label='Our product'
 									title='Our product'
 									className='font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400'
+									style={({ isActive }) => ({
+										textDecoration: isActive ? 'underline' : ''
+									})}
 								>
 									Statistics
-								</a>
+								</NavLink>
 							</li>
 							<li>
-								<a
-									href='/'
-									aria-label='Product pricing'
-									title='Product pricing'
+								<NavLink
+									to='/blog'
+									aria-label='Our product'
+									title='Our product'
 									className='font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400'
+									style={({ isActive }) => ({
+										textDecoration: isActive ? 'underline' : ''
+									})}
 								>
 									Blog
-								</a>
+								</NavLink>
 							</li>
 						</ul>
 						<div className='lg:hidden'>
@@ -113,34 +123,43 @@ const Navbar = () => {
 										<nav>
 											<ul className='space-y-4'>
 												<li>
-													<a
-														href='/'
+													<NavLink
+														to='/home'
 														aria-label='Our product'
 														title='Our product'
 														className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+														style={({ isActive }) => ({
+															textDecoration: isActive ? 'underline' : ''
+														})}
 													>
 														Home
-													</a>
+													</NavLink>
 												</li>
 												<li>
-													<a
-														href='/'
+													<NavLink
+														to='/statistics'
 														aria-label='Our product'
 														title='Our product'
 														className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+														style={({ isActive }) => ({
+															textDecoration: isActive ? 'underline' : ''
+														})}
 													>
 														Statistics
-													</a>
+													</NavLink>
 												</li>
 												<li>
-													<a
-														href='/'
-														aria-label='Product pricing'
-														title='Product pricing'
+													<NavLink
+														to='/blog'
+														aria-label='Our product'
+														title='Our product'
 														className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
+														style={({ isActive }) => ({
+															textDecoration: isActive ? 'underline' : ''
+														})}
 													>
 														Blog
-													</a>
+													</NavLink>
 												</li>
 											</ul>
 										</nav>
