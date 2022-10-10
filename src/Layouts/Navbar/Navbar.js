@@ -5,7 +5,7 @@ const Navbar = () => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	return (
 		<>
-			<div className='bg-orange-50 shadow-md'>
+			<div className='bg-orange-50 shadow-md sticky top-0'>
 				<div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
 					<div className='relative flex items-center justify-between'>
 						<a href='/' aria-label='Company' title='Company' className='inline-flex items-center'>

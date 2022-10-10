@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import * as FAIcon from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const SingleTopic = (props) => {
 	const { id, logo, name, total } = props.topic;
-
-	const handlerOnClickToic = () => {};
 
 	return (
 		<>
@@ -18,7 +16,7 @@ const SingleTopic = (props) => {
 						<h2 className='card-title'>Topic: {name}</h2>
 						<p className='text-zinc-400'>Total Question: {total}</p>
 						<div className='card-actions justify-end mt-4'>
-							<button className='btn bg-orange-400 hover:bg-orange-200 border-0 text-black w-11/12 mx-auto ' onClick={() => handlerOnClickToic()}>
+							<button className='btn bg-orange-400 hover:bg-orange-200 border-0 text-black w-11/12 mx-auto '>
 								Start Practice
 								<span className='ml-2'>
 									<FAIcon.FaArrowRight />
