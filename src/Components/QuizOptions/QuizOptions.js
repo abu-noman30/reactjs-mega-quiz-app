@@ -8,7 +8,7 @@ const QuizOptions = (props) => {
 	return (
 		<>
 			{options.map((option, index) => (
-				<li className='w-full rounded-t-lg border-b border-gray-200 dark:border-gray-600' key={index}>
+				<li className='w-full rounded-t-lg border-b border-gray-200' key={index}>
 					<SingleOption key={index} option={option} />
 				</li>
 			))}

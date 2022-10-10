@@ -13,8 +13,8 @@ const AllQuizes = () => {
 				<div className='col-span-4 lg:col-span-3 shadow-lg'>
 					{quizData.map((question, index) => (
 						<div className='mb-8 w-11/12 mx-auto' key={index}>
-							<h3 className='mb-4 font-semibold text-gray-900 dark:text-white'>Identification</h3>
-							<ul className='w-48 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600 dark:text-white'>
+							<h3 className='mb-4 font-semibold text-gray-900 '>{question.question}</h3>
+							<ul className='w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 '>
 								<QuizOptions key={index} question={question} />
 							</ul>
 						</div>
@@ -29,15 +29,15 @@ const AllQuizes = () => {
 								src='https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
 								alt='avatar'
 							/>
-							<h4 class='mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200 hover:underline'>John Doe</h4>
-							<p class='mx-2 mt-1 text-sm font-medium text-gray-600 dark:text-gray-400 hover:underline'>john@example.com</p>
+							<h4 class='mx-2 mt-2 font-medium text-gray-800  hover:underline'>John Doe</h4>
+							<p class='mx-2 mt-1 text-sm font-medium text-gray-600  hover:underline'>john@example.com</p>
 						</div>
 
 						<div class='flex flex-col justify-between flex-1 mt-6 w-10/12 mx-auto'>
-							<h4 class='mx-2 my-4 font-medium text-gray-800 dark:text-gray-200 hover:underline'>Total Quizes:</h4>
+							<h4 class='mx-2 my-4 font-medium text-gray-800 hover:underline'>Total Quizes: {loaderData.data.total}</h4>
 							<hr />
-							<h4 class='mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200 hover:underline'>Correct Answer:</h4>
-							<h4 class='mx-2 mt-2 font-medium text-gray-800 dark:text-gray-200 hover:underline'>Wrong Answer:</h4>
+							<h4 class='mx-2 mt-2 font-medium text-gray-800 hover:underline'>Correct Answer:</h4>
+							<h4 class='mx-2 mt-2 font-medium text-gray-800  hover:underline'>Wrong Answer:</h4>
 						</div>
 					</div>
 				</div>
