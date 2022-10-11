@@ -78,7 +78,7 @@ const AllQuizes = () => {
 							</div>
 						))}
 					</div>
-					<div className='col-span-4 lg:col-span-1 pb-16'>
+					<div className='col-span-4 lg:col-span-1 pb-4 lg:pb-16'>
 						{/* Sidebar Container */}
 						<div className='w-full lg:w-80 lg:my-0 lg:mr-6 h py-8 bg-orange-50 border-r lg:fixed right-0 top-20 shadow-lg rounded-lg'>
 							<h2 className='text-3xl font-semibold text-center'>MegaQuiz</h2>
@@ -96,7 +96,7 @@ const AllQuizes = () => {
 								<h4 className='mx-2 my-4 font-medium text-gray-800 hover:underline'>Total Quizes: {totalQuiz}</h4>
 								<hr />
 								<h4 className='mx-2 mt-2 font-medium text-gray-800 hover:underline'>Correct Answer: {countCurrect}</h4>
-								<h4 className='mx-2 mt-2 font-medium text-gray-800  hover:underline'>Wrong Answer: {countWrong}</h4>
+								<h4 className='mx-2 mt-2 font-medium text-gray-800  hover:underline'>Wrong Answer: {totalQuiz - countCurrect}</h4>
 							</div>
 						</div>
 					</div>

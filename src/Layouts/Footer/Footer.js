@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const Footer = () => {
 	return (
 		<>
-			<footer className='flex flex-col items-center justify-between p-6 bg-orange-50 shadow-inline shadow-black  sm:flex-row '>
+			<footer className='flex flex-col items-center justify-between p-6 bg-orange-50 shadow-2xl shadow-black  sm:flex-row '>
 				<Link href='/' className='text-xl font-bold text-gray-600 transition-colors duration-300 hover:text-gray-700 '>
 					MegaQuiz
 				</Link>

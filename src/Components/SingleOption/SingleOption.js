@@ -6,7 +6,7 @@ const SingleOption = (props) => {
 	const { totalQuiz } = props;
 	const { option, correctAnswer } = props;
 	const { countCurrect, setCountCurrect } = props;
-	const { countWrong, setCountWrong } = props;
+	// const { countWrong, setCountWrong } = props;
 
 	// console.log('option:', option);
 	// console.log('correctAnswer:', correctAnswer);
@@ -21,15 +21,12 @@ const SingleOption = (props) => {
 	const handlerOnClick = (option) => {
 		if (option === correctAnswer) {
 			if (countCurrect < totalQuiz) {
-				notify('Correct Answer');
+				notify('Correct Answer! 😎😎');
 				setCountCurrect(countCurrect + 1);
 				console.log('countCurrect:', countCurrect);
 			}
 		} else {
-			if (countWrong < totalQuiz) {
-				setCountWrong(countWrong + 1);
-				notify('Incorrect Answer! 😞😞');
-			}
+			notify('Incorrect Answer! 😞😞');
 		}
 	};
 	return (
