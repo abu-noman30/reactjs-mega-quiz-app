@@ -13,6 +13,11 @@ const SingleOption = (props) => {
 
 	const notify = (text) => toast(`${text}`);
 
+	const handleOnDisable = (e) => {
+		// console.log(e.target);
+		e.target.parent = true;
+	};
+
 	const handlerOnClick = (option) => {
 		if (option === correctAnswer) {
 			if (countCurrect < totalQuiz) {
@@ -30,14 +35,15 @@ const SingleOption = (props) => {
 	return (
 		<>
 			<div className='flex items-center pl-3 hover:bg-orange-50'>
-				<label className='cursor-pointer py-3 ml-2 w-full text-sm font-medium text-gray-900 '>
+				<label className='cursor-pointer py-3 ml-2 w-full text-sm font-medium text-gray-900'>
 					<input
 						type='radio'
 						name='radio-6'
 						className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2'
-						onClick={() => {
+						onChange={() => {
 							handlerOnClick(option);
 						}}
+						onClick={(e) => handleOnDisable(e)}
 					/>
 					<span className='ml-2'>{option}</span>
 				</label>

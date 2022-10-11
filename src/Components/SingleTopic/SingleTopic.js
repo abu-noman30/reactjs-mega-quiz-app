@@ -10,7 +10,7 @@ const SingleTopic = (props) => {
 			<Link to={`/topic/quiz/${id}`}>
 				<div className='border-2xl rounded-xl w-full bg-base-100 shadow-xl border-2'>
 					<figure>
-						<img src={logo} alt='Shoes' />
+						<img src={logo} alt='Shoes' className='bg-gray-200' />
 					</figure>
 					<div className='card-body'>
 						<h2 className='card-title'>Topic: {name}</h2>

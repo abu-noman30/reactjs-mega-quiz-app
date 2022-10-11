@@ -38,7 +38,7 @@ const AllQuizes = () => {
 							<div className='mb-8 w-11/12 mx-auto' key={index}>
 								<div className='flex items-center justify-between'>
 									<h3 className='mb-4 font-semibold text-gray-900 '>
-										<span className='font-bold mr-2'>Quiestion 1:</span>
+										<span className='font-bold mr-2'>Quiestion {index + 1}:</span>
 										{question.question}
 									</h3>
 									{/* Modal Button */}
