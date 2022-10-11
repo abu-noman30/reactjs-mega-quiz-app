@@ -32,7 +32,7 @@ const Navbar = () => {
 									to='/home'
 									aria-label='Our product'
 									title='Home'
-									className='font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400'
+									className='font-medium tracking-wide text-gray-900 duration-200 hover:bg-orange-100 rounded px-2 py-1'
 									style={({ isActive }) => ({
 										textDecoration: isActive ? 'underline' : ''
 									})}
@@ -45,7 +45,7 @@ const Navbar = () => {
 									to='/statistics'
 									aria-label='Our product'
 									title='Statistics'
-									className='font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400'
+									className='font-medium tracking-wide text-gray-900  hover:bg-orange-100 rounded px-2 py-1'
 									style={({ isActive }) => ({
 										textDecoration: isActive ? 'underline' : ''
 									})}
@@ -58,7 +58,7 @@ const Navbar = () => {
 									to='/blog'
 									aria-label='Our product'
 									title='Blog'
-									className='font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400'
+									className='font-medium tracking-wide text-gray-900  hover:bg-orange-100 rounded px-2 py-1'
 									style={({ isActive }) => ({
 										textDecoration: isActive ? 'underline' : ''
 									})}

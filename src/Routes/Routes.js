@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Error from '../Components/Error/Error';
 import AllQuizes from '../Pages/AllQuizes/AllQuizes';
+import Blog from '../Pages/Blog/Blog';
 import Home from '../Pages/Home/Home';
 import Root from '../Pages/Root/Root';
 import Statistics from '../Pages/Statistics/Statistics';
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
 				path: 'statistics',
 				element: <Statistics />,
 				loader: async () => await fetch('https://openapi.programming-hero.com/api/quiz')
+			},
+			{
+				path: '/blog',
+				element: <Blog />
 			}
 		]
 	}
