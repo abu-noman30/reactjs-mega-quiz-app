@@ -2,7 +2,7 @@ import React from 'react';
 import SingleOption from '../SingleOption/SingleOption';
 
 const QuizOptions = (props) => {
-	console.log(props.question);
+	// console.log(props.question);
 	const { options } = props.question;
 
 	return (

@@ -2,7 +2,7 @@ import React from 'react';
 
 const SingleOption = (props) => {
 	const { option } = props;
-	console.log(option);
+	// console.log(option);
 	return (
 		<>
 			<div className='flex items-center pl-3'>
