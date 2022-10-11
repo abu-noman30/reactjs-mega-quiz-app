@@ -5,9 +5,13 @@ import QuizOptions from '../../Components/QuizOptions/QuizOptions';
 
 const AllQuizes = () => {
 	const loaderData = useLoaderData();
+	const quizTopic = loaderData.data.name;
 	const quizData = loaderData.data.questions;
+	const totalQuiz = loaderData.data.total;
 	const [modalData, setModalData] = useState('');
-	// console.log(modalDetails);
+	const [countCurrect, setCountCurrect] = useState(0);
+	const [countWrong, setCountWrong] = useState(0);
+	// console.log(quizData);
 
 	const handlerOnOpenModal = (correctAnswer) => {
 		setModalData(correctAnswer);
@@ -20,6 +24,11 @@ const AllQuizes = () => {
 		<>
 			<div className=' grid grid-cols-4 gap-4 w-11/12 mx-auto my-12'>
 				<div className='col-span-4 lg:col-span-3 shadow-lg rounded-lg'>
+					{/* Quizes Container */}
+					<h1 className='mb-12 text-2xl font-bold text-gray-900 md:text-3xl lg:text-4xl text-center underline underline-offset-8'>
+						Quiz of
+						<span className='text-transparent bg-clip-text bg-gradient-to-l to-gray-700 from-gray-500 ml-2'>{quizTopic}</span>
+					</h1>
 					{quizData.map((question, index) => (
 						<div className='mb-8 w-11/12 mx-auto' key={index}>
 							<div className='flex items-center justify-between'>
@@ -46,13 +55,23 @@ const AllQuizes = () => {
 								</div>
 							</div>
 							{/* ----------------------------- */}
+							{/* Quizes */}
 							<ul className='w-full text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 '>
-								<QuizOptions key={index} question={question} />
+								<QuizOptions
+									key={index}
+									question={question}
+									countCurrect={countCurrect}
+									setCountCurrect={setCountCurrect}
+									countWrong={countWrong}
+									setCountWrong={setCountWrong}
+									totalQuiz={totalQuiz}
+								/>
 							</ul>
 						</div>
 					))}
 				</div>
 				<div className='col-span-4 lg:col-span-1 '>
+					{/* Sidebar Container */}
 					<div className='w-full lg:w-80 lg:my-0 lg:mr-6 h-screen py-8 bg-orange-50 border-r lg:fixed right-0 top-20 shadow-lg rounded-lg'>
 						<h2 className='text-3xl font-semibold text-center'>MegaQuiz</h2>
 						<div className='flex flex-col items-center mt-6 -mx-2'>
@@ -66,10 +85,10 @@ const AllQuizes = () => {
 						</div>
 
 						<div className='flex flex-col justify-between flex-1 mt-6 w-10/12 mx-auto'>
-							<h4 className='mx-2 my-4 font-medium text-gray-800 hover:underline'>Total Quizes: {loaderData.data.total}</h4>
+							<h4 className='mx-2 my-4 font-medium text-gray-800 hover:underline'>Total Quizes: {totalQuiz}</h4>
 							<hr />
-							<h4 className='mx-2 mt-2 font-medium text-gray-800 hover:underline'>Correct Answer:</h4>
-							<h4 className='mx-2 mt-2 font-medium text-gray-800  hover:underline'>Wrong Answer:</h4>
+							<h4 className='mx-2 mt-2 font-medium text-gray-800 hover:underline'>Correct Answer: {countCurrect}</h4>
+							<h4 className='mx-2 mt-2 font-medium text-gray-800  hover:underline'>Wrong Answer: {countWrong}</h4>
 						</div>
 					</div>
 				</div>
