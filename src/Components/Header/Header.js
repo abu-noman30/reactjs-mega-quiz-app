@@ -42,7 +42,7 @@ const Header = (props) => {
 			</div>
 
 			{/* Topics Container */}
-			<div id='topics-container order-2'>
+			<div id='topics-container'>
 				<Topics topicsData={topicsData} />
 			</div>
 		</>
