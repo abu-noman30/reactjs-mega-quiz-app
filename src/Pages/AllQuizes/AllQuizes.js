@@ -27,7 +27,7 @@ const AllQuizes = () => {
 			<div className=''>
 				<ToastContainer position='top-center' />
 
-				<div className=' grid grid-cols-4 gap-4 w-11/12 mx-auto my-12'>
+				<div className=' grid grid-cols-4 gap-4 w-11/12 mx-auto mt-12 pb-9'>
 					<div className='col-span-4 lg:col-span-3 shadow-lg rounded-lg'>
 						{/* Quizes Container */}
 						<h1 className='mb-12 text-2xl font-bold text-gray-900 md:text-3xl lg:text-4xl text-center underline underline-offset-8'>
@@ -78,9 +78,9 @@ const AllQuizes = () => {
 							</div>
 						))}
 					</div>
-					<div className='col-span-4 lg:col-span-1 '>
+					<div className='col-span-4 lg:col-span-1 pb-16'>
 						{/* Sidebar Container */}
-						<div className='w-full lg:w-80 lg:my-0 lg:mr-6 h-screen py-8 bg-orange-50 border-r lg:fixed right-0 top-20 shadow-lg rounded-lg'>
+						<div className='w-full lg:w-80 lg:my-0 lg:mr-6 h py-8 bg-orange-50 border-r lg:fixed right-0 top-20 shadow-lg rounded-lg'>
 							<h2 className='text-3xl font-semibold text-center'>MegaQuiz</h2>
 							<div className='flex flex-col items-center mt-6 -mx-2'>
 								<img
