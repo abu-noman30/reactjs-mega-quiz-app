@@ -10,7 +10,7 @@ const AllQuizes = () => {
 	return (
 		<>
 			<div className=' grid grid-cols-4 gap-4 w-11/12 mx-auto my-12'>
-				<div className='col-span-4 lg:col-span-3 shadow-lg'>
+				<div className='col-span-4 lg:col-span-3 shadow-lg rounded-lg'>
 					{quizData.map((question, index) => (
 						<div className='mb-8 w-11/12 mx-auto' key={index}>
 							<h3 className='mb-4 font-semibold text-gray-900 '>{question.question}</h3>
@@ -21,8 +21,8 @@ const AllQuizes = () => {
 					))}
 				</div>
 				<div className='col-span-4 lg:col-span-1 '>
-					<div className='w-full lg:w-80 lg:my-0 lg:mr-6 h-screen py-8 bg-orange-50 border-r lg:fixed right-0 top-20'>
-						<h2 className='text-3xl font-semibold text-center'>Brand</h2>
+					<div className='w-full lg:w-80 lg:my-0 lg:mr-6 h-screen py-8 bg-orange-50 border-r lg:fixed right-0 top-20 shadow-lg rounded-lg'>
+						<h2 className='text-3xl font-semibold text-center'>MegaQuiz</h2>
 						<div class='flex flex-col items-center mt-6 -mx-2'>
 							<img
 								class='object-cover w-24 h-24 mx-2 rounded-full'

@@ -31,7 +31,7 @@ const Navbar = () => {
 								<NavLink
 									to='/home'
 									aria-label='Our product'
-									title='Our product'
+									title='Home'
 									className='font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400'
 									style={({ isActive }) => ({
 										textDecoration: isActive ? 'underline' : ''
@@ -44,7 +44,7 @@ const Navbar = () => {
 								<NavLink
 									to='/statistics'
 									aria-label='Our product'
-									title='Our product'
+									title='Statistics'
 									className='font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400'
 									style={({ isActive }) => ({
 										textDecoration: isActive ? 'underline' : ''
@@ -57,7 +57,7 @@ const Navbar = () => {
 								<NavLink
 									to='/blog'
 									aria-label='Our product'
-									title='Our product'
+									title='Blog'
 									className='font-medium tracking-wide text-gray-900 transition-colors duration-200 hover:text-teal-accent-400'
 									style={({ isActive }) => ({
 										textDecoration: isActive ? 'underline' : ''
@@ -81,7 +81,7 @@ const Navbar = () => {
 								</svg>
 							</button>
 							{isMenuOpen && (
-								<div className='absolute top-0 left-0 w-full'>
+								<div className='absolute top-0 left-0 w-full order-10'>
 									<div className='p-5 bg-orange-50 border rounded shadow-sm'>
 										<div className='flex items-center justify-between mb-4 border-b-2 border-gray-600'>
 											<div>
@@ -126,7 +126,7 @@ const Navbar = () => {
 													<NavLink
 														to='/home'
 														aria-label='Our product'
-														title='Our product'
+														title='Home'
 														className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
 														style={({ isActive }) => ({
 															textDecoration: isActive ? 'underline' : ''
@@ -139,7 +139,7 @@ const Navbar = () => {
 													<NavLink
 														to='/statistics'
 														aria-label='Our product'
-														title='Our product'
+														title='Statistics'
 														className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
 														style={({ isActive }) => ({
 															textDecoration: isActive ? 'underline' : ''
@@ -152,7 +152,7 @@ const Navbar = () => {
 													<NavLink
 														to='/blog'
 														aria-label='Our product'
-														title='Our product'
+														title='Blog'
 														className='font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400'
 														style={({ isActive }) => ({
 															textDecoration: isActive ? 'underline' : ''
