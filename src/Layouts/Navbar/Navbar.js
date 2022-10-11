@@ -8,7 +8,7 @@ const Navbar = () => {
 			<div className='bg-orange-50 shadow-md sticky top-0 z-20'>
 				<div className='px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8'>
 					<div className='relative flex items-center justify-between'>
-						<a href='/' aria-label='Company' title='Company' className='inline-flex items-center'>
+						<NavLink to='/' aria-label='Company' title='Company' className='inline-flex items-center'>
 							<svg
 								className='w-8 text-teal-accent-400'
 								viewBox='0 0 24 24'
@@ -25,7 +25,7 @@ const Navbar = () => {
 								<rect x='14' y='11' width='7' height='12' />
 							</svg>
 							<span className='ml-2 text-xl font-bold tracking-wide text-gray-900 '>MegaQuiz</span>
-						</a>
+						</NavLink>
 						<ul className='items-center hidden space-x-8 lg:flex'>
 							<li>
 								<NavLink

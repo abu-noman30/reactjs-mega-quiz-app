@@ -16,8 +16,9 @@ const SingleOption = (props) => {
 	const handlerOnClick = (option) => {
 		if (option === correctAnswer) {
 			if (countCurrect < totalQuiz) {
+				notify('Correct Answer');
 				setCountCurrect(countCurrect + 1);
-				notify('Correct Answer! 🎉🎉');
+				console.log('countCurrect:', countCurrect);
 			}
 		} else {
 			if (countWrong < totalQuiz) {
@@ -29,19 +30,16 @@ const SingleOption = (props) => {
 	return (
 		<>
 			<div className='flex items-center pl-3 hover:bg-orange-50'>
-				<input
-					id='list-radio-license'
-					type='radio'
-					value=''
-					name='list-radio'
-					className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500'
-					onClick={() => {
-						handlerOnClick(option);
-					}}
-				/>
-
-				<label htmlFor='list-radio-license' className='py-3 ml-2 w-full text-sm font-medium text-gray-900'>
-					{option}
+				<label className='cursor-pointer py-3 ml-2 w-full text-sm font-medium text-gray-900 '>
+					<input
+						type='radio'
+						name='radio-6'
+						className='w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2'
+						onClick={() => {
+							handlerOnClick(option);
+						}}
+					/>
+					<span className='ml-2'>{option}</span>
 				</label>
 			</div>
 		</>
