@@ -1,5 +1,5 @@
 import React from 'react';
-import { toast, ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const SingleOption = (props) => {
@@ -11,12 +11,9 @@ const SingleOption = (props) => {
 	// console.log('option:', option);
 	// console.log('correctAnswer:', correctAnswer);
 
-	const notify = (option) =>
-		toast(`${option}`, {
-			position: 'top-center'
-		});
+	const notify = (text) => toast(`${text}`);
 
-	const handlerOnClick = () => {
+	const handlerOnClick = (option) => {
 		if (option === correctAnswer) {
 			if (countCurrect < totalQuiz) {
 				setCountCurrect(countCurrect + 1);
@@ -31,8 +28,7 @@ const SingleOption = (props) => {
 	};
 	return (
 		<>
-			<div className='flex items-center pl-3'>
-				<ToastContainer />
+			<div className='flex items-center pl-3 hover:bg-orange-50'>
 				<input
 					id='list-radio-license'
 					type='radio'
@@ -43,6 +39,7 @@ const SingleOption = (props) => {
 						handlerOnClick(option);
 					}}
 				/>
+
 				<label htmlFor='list-radio-license' className='py-3 ml-2 w-full text-sm font-medium text-gray-900'>
 					{option}
 				</label>

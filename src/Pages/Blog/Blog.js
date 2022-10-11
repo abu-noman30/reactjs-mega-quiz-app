@@ -103,8 +103,7 @@ font-bold
 							argument, the returned object's current property is set to undefined..
 							<br />
 							<br />
-							Some of the use cases of useRef hook are:
-							<br />
+							<p className='font-semibold'>Some of the use cases of useRef() hook are:</p>
 							<ul className='list-decimal pl-8'>
 								<li>To access DOM elements.</li>
 								<li>To persist values in successive renders.</li>

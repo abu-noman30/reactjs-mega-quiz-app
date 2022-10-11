@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 import Topics from '../Topics/Topics';
 
 const Header = (props) => {
@@ -8,7 +9,7 @@ const Header = (props) => {
 	return (
 		<>
 			{/* Header Container */}
-			<div className=' lg:relative flex flex-col py-20 lg:px-32 lg:pt-0 lg:flex-col lg:pb-0 bg-orange-50 lg:mt-8 mt-20 mb-8'>
+			<div className=' lg:relative flex flex-col py-20 lg:px-32 lg:pt-0 lg:flex-col lg:pb-0 bg-orange-50 lg:mt-8 mt-20 mb-8 shadow-sm'>
 				<div className='flex flex-col items-center lg:items-start justify-center w-full px-4 md:px-16 lg:px-8 lg:max-w-screen-x'>
 					<div className='mb-16 lg:my-40 lg:max-w-lg lg:pr-5'>
 						<div className='max-w-xl mb-6'>
