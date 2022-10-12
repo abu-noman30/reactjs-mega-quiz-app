@@ -9,8 +9,8 @@ const Header = (props) => {
 	return (
 		<>
 			{/* Header Container */}
-			<div className=' lg:relative flex flex-col py-20 lg:px-32 lg:pt-0 lg:flex-col lg:pb-0 bg-orange-50 lg:mt-8 mt-20 mb-8 shadow-sm'>
-				<div className='flex flex-col items-center lg:items-start justify-center w-full px-4 md:px-16 lg:px-8 lg:max-w-screen-x'>
+			<div className=' lg:relative flex flex-col py-10 lg:px-32 lg:pt-0 lg:flex-col lg:pb-0 bg-orange-50 lg:mt-8 mt-12 mb-16 shadow-sm '>
+				<div className='flex flex-col items-center lg:items-start justify-center w-full px-4 md:px-16 lg:px-8 lg:max-w-screen-x text-center md:text-left'>
 					<div className='mb-16 lg:my-40 lg:max-w-lg lg:pr-5'>
 						<div className='max-w-xl mb-6'>
 							<h2 className='max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl sm:leading-none'>

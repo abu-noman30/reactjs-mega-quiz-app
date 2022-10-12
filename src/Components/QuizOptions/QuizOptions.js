@@ -2,12 +2,10 @@ import React from 'react';
 import SingleOption from '../SingleOption/SingleOption';
 
 const QuizOptions = (props) => {
-	const { totalQuiz } = props;
+	const { totalQuiz, question } = props;
+	const { options, correctAnswer } = question;
 	const { countCurrect, setCountCurrect } = props;
-	const { countWrong, setCountWrong } = props;
-	// console.log(props.question);
-	const { options, correctAnswer } = props.question;
-	// console.log('correctAnswer:', correctAnswer);
+	// const { countWrong, setCountWrong } = props;
 
 	return (
 		<>
@@ -19,9 +17,11 @@ const QuizOptions = (props) => {
 						correctAnswer={correctAnswer}
 						countCurrect={countCurrect}
 						setCountCurrect={setCountCurrect}
-						countWrong={countWrong}
-						setCountWrong={setCountWrong}
+						// countWrong={countWrong}
+						// setCountWrong={setCountWrong}
 						totalQuiz={totalQuiz}
+						options={options}
+						question={question}
 					/>
 				</li>
 			))}

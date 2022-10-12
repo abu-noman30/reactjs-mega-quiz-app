@@ -58,7 +58,7 @@ font-bold
 '
 								type='button'
 							>
-								Q1: How does Context API works?
+								Q2: How does Context API works?
 							</button>
 						</h2>
 
@@ -93,7 +93,7 @@ font-bold
 '
 								type='button'
 							>
-								Q1: What is useRef hook in react?
+								Q3: What is useRef hook in react?
 							</button>
 						</h2>
 

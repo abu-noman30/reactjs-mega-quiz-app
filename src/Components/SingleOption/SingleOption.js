@@ -3,32 +3,26 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const SingleOption = (props) => {
-	const { totalQuiz } = props;
+	const { totalQuiz, options, question } = props;
 	const { option, correctAnswer } = props;
 	const { countCurrect, setCountCurrect } = props;
 	// const { countWrong, setCountWrong } = props;
-
-	// console.log('option:', option);
-	// console.log('correctAnswer:', correctAnswer);
+	console.log(options);
+	console.log(question);
 
 	const notify = (text) => toast(`${text}`);
-
-	const handleOnDisable = (e) => {
-		// console.log(e.target);
-		e.target.parent = true;
-	};
 
 	const handlerOnClick = (option) => {
 		if (option === correctAnswer) {
 			if (countCurrect < totalQuiz) {
 				notify('Correct Answer! 😎😎');
 				setCountCurrect(countCurrect + 1);
-				console.log('countCurrect:', countCurrect);
 			}
 		} else {
 			notify('Incorrect Answer! 😞😞');
 		}
 	};
+
 	return (
 		<>
 			<div className='flex items-center pl-3 hover:bg-orange-50'>
@@ -40,7 +34,6 @@ const SingleOption = (props) => {
 						onChange={() => {
 							handlerOnClick(option);
 						}}
-						onClick={(e) => handleOnDisable(e)}
 					/>
 					<span className='ml-2'>{option}</span>
 				</label>
