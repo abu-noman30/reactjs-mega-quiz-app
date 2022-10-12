@@ -14,7 +14,7 @@ const Header = (props) => {
 					<div className='mb-16 lg:my-40 lg:max-w-lg lg:pr-5'>
 						<div className='max-w-xl mb-6'>
 							<h2 className='max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:text-5xl sm:leading-none'>
-								Easy and intuitive onlint testing.
+								Easy and intuitive online testing.
 							</h2>
 							<p className='text-base text-gray-700 md:text-lg'>
 								MegaQuiz is a cloud-testing platform that supports online creation and delivery of feature-rich tests.
