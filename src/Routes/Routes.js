@@ -33,7 +33,7 @@ const router = createBrowserRouter([
 				loader: async () => await fetch('https://openapi.programming-hero.com/api/quiz')
 			},
 			{
-				path: '/blog',
+				path: 'blog',
 				element: <Blog />
 			}
 		]
